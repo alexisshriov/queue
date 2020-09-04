@@ -11,6 +11,7 @@ class Queue {
     }
 
     add(userId) {
+        if (this.data.includes(userId)) return false
         this.data.push(userId)
         return this.data.length;
     }
